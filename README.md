@@ -1,8 +1,7 @@
 #Correlation Analysis 
 ##Summary 
 
-##URL Dashboard
-https://vhvxeyh7ytfk3spmpzdwej.streamlit.app/
+Streamlit URL: https://vhvxeyh7ytfk3spmpzdwej.streamlit.app/
 
 ##Key Findings: 
 
