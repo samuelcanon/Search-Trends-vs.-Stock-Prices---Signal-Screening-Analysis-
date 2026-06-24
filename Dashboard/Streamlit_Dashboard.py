@@ -6,6 +6,7 @@ import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots 
 from scipy import stats
+from pathlib import Path
 
 #Page Setup
 st.set_page_config(
@@ -17,14 +18,14 @@ st.set_page_config(
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('data_aligned.csv',
+        base_dir = Path(__file__).parent
+        df = pd.read_csv(base_dir / "data_aligned.csv",
                          index_col='week_end_date',
                          parse_dates=True)
-        findings = pd.read_csv('findings.csv')
+        findings = pd.read_csv(base_dir / "findings.csv")
         return df, findings
     except FileNotFoundError as e:
         st.error(f"Data file not found: {e}")
-        st.error("Run the analysis notebook first to generate data_aligned.csv")
         st.stop()
 
 df_aligned, findings_df = load_data()
