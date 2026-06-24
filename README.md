@@ -3,7 +3,11 @@
 
 Live Dashboard: https://vhvxeyh7ytfk3spmpzdwej.streamlit.app/
 
+-------
+
 ## Business Context: 
+
+-------
 
 ## Methodology
 **Three Independent Data Sources**
@@ -11,9 +15,15 @@ Live Dashboard: https://vhvxeyh7ytfk3spmpzdwej.streamlit.app/
 **Returns (Not Prices)**
 **Pre-Registered Lag 1 Test**
 
+-------
+
 ## Statistics
 
+-------
+
 ## Key Findings
+
+-------
 
 ## Stock Specific Notes
 **TSLA**
@@ -21,17 +31,25 @@ Live Dashboard: https://vhvxeyh7ytfk3spmpzdwej.streamlit.app/
 **JPM**
 **META**
 
+-------
+
 ## Charts
 **Time Series (All Stocks)**
 **Lag Correlation Chart**
 **Proxy Comparison Chart**
+
+-------
 
 ## How to Run
 **Notebook**
 
 **Dashboard**
 
+-------
+
 ## Limitations
+
+-------
 
 ## Disclaimer 
 
