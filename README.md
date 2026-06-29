@@ -14,32 +14,18 @@ This is a correlation and lag analysis study.
 -------
 
 ## Business Context
+The project is framed as a screening exercise for an investment advisory firm asking a practical question: before spending money building a tool around online trends/attention, is there a signal worth chasing?
 
+The ouput is a tiered recommendation per stock per source: 
+  no-go        |r| < 0.20          Explains under 4% of return movement — not worth pursuing
+  investigate  0.20 <= |r| < 0.40  Worth a closer look
+  go           |r| >= 0.40         Strong enough to build on
 
-|No-go|r < 0.20|Explains under 4% of return movement — not worth pursuing|
-|Investigate|0.20 <= r < 0.40|Worth a closer look|
-|Go|r >= 0.40 | Strong enough to build on| 
-
--------
-
-## Methodology
-**Three Independent Data Sources**
-**Alignment**
-**Returns (Not Prices)**
-**Pre-Registered Lag 1 Test**
+These thresholds are a business action bar, not a statistical convention. They are set before any results are seen. It answers how strong a correlation must be before a firm should look further into it. 
 
 -------
 
 ## Key Findings
-
--------
-
-## Statistics
-
-| # | Title        | Type                     | Notes                        |
-|---|--------------|--------------------------|------------------------------|
-| 1 | Pearson r    | Histogram + box plot     |                              |
-| 2 | Spearman r   | Bar + std dev error bars |                              |
 
 -------
 
@@ -51,6 +37,33 @@ This is a correlation and lag analysis study.
 
 -------
 
+## Methodology
+**Three Independent Data Sources**
+1. Yahoo Finance (yfinance): Daily closing price, auto-adjusted for splits and dividendss
+2. Google Trends (pytrends): Invididuals actively searching. A 0-100 weekly relative interest index.
+3. Wikipedia Page Views (Wiki REST API): Individual's passive attention.
+
+Note: Two attention sources are used deliberately to gain a more complete and credible result than a single source provides.
+
+**Alignment**
+All sources were placed on one weekly Friday anchored calendar (Friday close for prices, summed weekly totals for Wiki Views, re-anchored weekly values for Trends) and combined with an inner join. One trailing partial week was dropped. Final dataset: 155 weeks (0.6% observations lost in the join).
+
+**Returns (Not Prices)**
+Stock prices were converted to weekly percent returns before any correlation. Raw prices trend upwards and two upward trending series look correlated even when unrelated, reflecting spurious correlation. Returns strip the trend and isolate genuine week to week movement.
+
+**Pre-Registered Lag 1 Test**
+A lag shifts attention backward in time to line up against a later week's return. Lag 1 was locked as the primary test before results were seen. This prevents data dredging (reporting the best one, manufactures findings from noise). Lag 0-4 are computed and shown for exploratory context.
+
+-------
+
+## Statistics
+
+| # | Title        | Type                     | Notes                        |
+|---|--------------|--------------------------|------------------------------|
+| 1 | Pearson r    | Histogram + box plot     |                              |
+| 2 | Spearman r   | Bar + std dev error bars |                              |
+
+-------
 ## Charts
 **Time Series (All Stocks)**
 **Lag Correlation Chart**
@@ -63,14 +76,6 @@ This is a correlation and lag analysis study.
 | 3 | Proxy Comparison Chart    | Two-panel bar            |                              |
 
 -------
-
-## How to Run
-**Notebook**
-
-**Dashboard**
-
--------
-
 ## Outputs
 
 Pre-run outputs are in /outputs so you can review result without running the notebook:
@@ -80,6 +85,13 @@ Pre-run outputs are in /outputs so you can review result without running the not
 | summary_stats.csv       | Top-level metrics: mean LOS, std dev, CI, burden rates |
 | condition_analysis.csv  | Per-comorbidity mean LOS and prevalence                |
 | facility_comparison.csv | Per-facility encounter count, mean LOS, std dev        |
+
+-------
+
+## How to Run
+**Notebook**
+
+**Dashboard**
 
 -------
 
