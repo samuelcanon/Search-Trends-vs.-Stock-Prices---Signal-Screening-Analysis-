@@ -31,11 +31,11 @@ These thresholds are a business action bar, not a statistical convention. They a
 All eight pre-registered lag one tests landed below the 0.20 threshold (no-go tier).
 
 | Stock  | Google Trends (lag 1)   | Wikipedia (lag 1) |
-|----------------------------------|-------------------|
+|--------|-------------------------|-------------------|
 | TSLA   | +0.0153                 | -0.1343           |
 | NVDA   | -0.0015                 | +0.0480           |
 | META   | +0.0913                 | -0.1599           |
-|JPM     | -0.0375                 | +0.0131           |
+| JPM    | -0.0375                 | +0.0131           |
 
 Null Result: Both Google Trends and Wikipedia page views do not show a consistent lead relationship with weekly price movements for the four stocks analysed over this period (Jan 2022-Dec 2024). All correlation coefficients at the pre-registered lag fall below the threshold. 
 
