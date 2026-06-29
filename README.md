@@ -8,11 +8,17 @@ This is a correlation and lag analysis study.
 
 **Live Interactive Dashboard:** 
 [**search-trends-vs-stock-returns.streamlit.app**](https://search-trends-vs-stock-returns.streamlit.app/)
+
 *Stock Selector | Data Filter | Live Correlation Recompute*
 
 -------
 
 ## Business Context
+
+  no-go        |r| < 0.20          Explains under 4% of return movement — not worth pursuing
+  investigate  0.20 <= |r| < 0.40  Worth a closer look
+  go           |r| >= 0.40         Strong enough to build on
+
 
 -------
 
