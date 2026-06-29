@@ -125,10 +125,11 @@ Place data_aligned.csv and findings.csv in the same folder as dashboard.py. The 
 
 ## Limitations
 
-- Weekly Granularity:
-- One Three Year Window:
-- No Macro Controls:
-- 
+- Weekly Granularity: A daily analysis might reveal a faster structure that a weekly view averages away. 
+- One Three Year Window: A different time period could have behaved differently.
+- No Macro Controls: Overall market moves, sector rotation, and volatility regime are not controlled for.
+- Lag 2: Needs a pre-specified holdout period before it could be treated as real.
+- Public Data Priced In: Any genuine signal in freeling available attention data is plausibly reflected in the price already, a reason to expect a null. 
 -------
 
 ## Disclaimer 
