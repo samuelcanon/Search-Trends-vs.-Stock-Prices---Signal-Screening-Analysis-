@@ -66,15 +66,12 @@ Pearson r is the primary metric with Spearman r as a robustness check (a gap ove
 
 -------
 ## Charts
-**Time Series (All Stocks)**
-**Lag Correlation Chart**
-**Proxy Comparison Chart**
 
 | # | Title                     | Type                     | Notes                        |
 |---|---------------------------|--------------------------|------------------------------|
 | 1 | Time Series (All Stocks)  | Dual-axis line chart    | Search volume Vs. Weekly Return per stock. If search led price, spikes would precede return spikes.                            |
 | 2 | Lag Correlation Chart     | Line chart | Correlation by lag (0-4) for both proxies. If attention led price, a line would clear the 0.20 threshold at lag 1 or beyond |
-| 3 | Proxy Comparison Chart    | Bar chart           |                              |
+| 3 | Proxy Comparison Chart    | Bar chart           | The two attention sources at lag 0. Wiki is 'stronger' than Trends for three of four stocks, but stronger means less week and neither source clear the threshold|
 
 -------
 ## Outputs
@@ -83,9 +80,8 @@ Pre-run outputs are in /outputs so you can review result without running the not
  
 | File                    | Contents                                               |
 |-------------------------|--------------------------------------------------------|
-| summary_stats.csv       | Top-level metrics: mean LOS, std dev, CI, burden rates |
-| condition_analysis.csv  | Per-comorbidity mean LOS and prevalence                |
-| facility_comparison.csv | Per-facility encounter count, mean LOS, std dev        |
+| data_aligned.csv        | 155 week aligned dataset (Jan 2022–Dec 2024) per stock, weekly return, Google Trends volume, Wikipedia views, and lagged attention columns. |
+| findings.csv            | 8 rows (4 stocks × 2 proxies) pre-registered lag-1 correlation, lags, and the go/investigate/no-go recommendation per test.         |
 
 -------
 
