@@ -14,6 +14,7 @@ This is a correlation and lag analysis study.
 -------
 
 ## Business Context
+
 The project is framed as a screening exercise for an investment advisory firm asking a practical question: before spending money building a tool around online trends/attention, is there a signal worth chasing?
 
 The ouput is a tiered recommendation per stock per source: 
